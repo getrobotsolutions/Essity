@@ -1,9 +1,9 @@
 ﻿var speak = new Array( );
 
 
-        speak[0] = "Take a look at our robot at some of our previous trade shows";
-        speak[1] = "hear testimonials from trade show clients";
-        speak[2] = "spin the wheel for your chance to win great prizes";
+        speak[0] = "Congratulations to our elite club winners";
+        speak[1] = "Please have a look at some of our products";
+        speak[2] = "Please let us know how you enjoyed our event";
         speak[3] = "Read a welcome message from our dean.";
         speak[4] = "Find out what classes you need for your major.";
         speak[5] = "";
@@ -20,21 +20,21 @@ function FC_ContentsCall(strContentsName, strLanguage)
     switch (strContentsName)
     {
         case "Welcome":
-            PlaySpeech("Hi, I'm Tracey the trade show robot. I can be rented for trade shows and events. Press a button on my screen to begin");
+            PlaySpeech("Hello, thank you for coming to our conference. We are excited you came!");
             break;
         case "Home":
            location.href = "../../maincontents.htm";
             break;
         case "Club-Winners":
-            //PlaySpeech(speak[0]);
+            PlaySpeech(speak[0]);
             location.href = "Contents/Club-Winners/index.html";
             break;
         case "Products":
-            //PlaySpeech(speak[1]);
+            PlaySpeech(speak[1]);
             location.href = "Contents/Products/index.html";
             break;
         case "Survey":
-            //PlaySpeech(speak[2]);
+            PlaySpeech(speak[2]);
             location.href = "Contents/Survey/index.html";
             break;
         

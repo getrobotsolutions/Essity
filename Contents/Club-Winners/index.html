@@ -48,9 +48,13 @@
 </nav>
 
 <section class="main-content">
-    <div class="bmg">
+    <div class="bmg" style="padding-top: 100px;">
       <div class="wrap" >
-        <iframe src="https://www.connecticutbasementsystems.com/about-us/before-after.html" width="1080" height="1100"></iframe>           
+        <h1 style="text-align: center;font-size: 40px;font-weight: bold;margin-bottom: 50px;">Congratulations, Elite Club Winners!</h1>
+        <img id="member-image" src="images/1.jpeg" width="600">
+        <img id="change" src="images/right-arrow.png" width="400px" style="position: absolute;top: 650px;right: 30px;">
+        </br>
+        <h2 id="MemberName" style="text-align: center;width: 610px;font-size: 40px;font-weight: bold;color: #00699a;">Mary Wells</h2>      
                         
       </div>
     </div>
@@ -103,6 +107,22 @@
     {
         LanguageChange('spanish');
     }
+    var temp=2;
+    var MemberNames = new Array( );
+    MemberNames[1]="Mary Wells";
+    MemberNames[2]="Joe Smith";
+    MemberNames[3]="John Richards";
+    $(document).ready(function(){
+      $('#change').click(function () {
+        
+        $('#member-image').attr("src",'images/'+temp+'.jpeg');
+        $('#MemberName').text(MemberNames[temp]);
+        temp++;
+        if (temp>3) {
+          temp=1;
+        }
+      });
+    })
 </script>
 
 <script language="JavaScript" type="text/javascript" src="js/info.js"></script>
